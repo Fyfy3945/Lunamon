@@ -1,0 +1,60 @@
+<DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Achat Lunamon</title>
+            <link rel="stylesheet" href="style.css">
+            <script src="script.js" defer></script>
+        </head>
+
+        <!--Definisions des label-->
+        <p id="wallet">Lunamon : 0 | En circulation : 1000000</p>
+        <p id="savings">Épargne : 0 Lunamon</p>
+        <p id="score">ScorePoints : 0</p>
+
+        <!--Boite d'achat-->
+        <input type="number" min="10" max="100000" id="value">
+
+        <!--Definisions des bouton-->
+        <button id="buy">Acheter des Lunamon</button>
+        <button id="sell">Vendre des Lunamon</button>
+        <button id="save">Épargner des Lunamon</button>
+        <button id="exchange">Échanger en ScorePoints</button>
+        <button id="unsave">Retirer de l'épargne</button>
+
+        <!--Bouton de réinjection-->
+        <label for="reinjectAmount">Choisir le montant à réinjecter :</label>
+        <select id="reinjectAmount">
+            <option value="1000000">1 Million Lunamon</option>
+            <option value="5000000">5 Millions Lunamon</option>
+            <option value="10000000">10 Millions Lunamon</option>
+        </select>
+        <button id="reinject">Réinjecter Lunamon</button>
+
+        <!--Boite de dialogue d'information-->
+        <p id="console"></p>
+
+        <!--Definition du shop de cosmetique-->
+        <h2>Shop Cosmétique</h2>
+        <div id="shop"></div>
+
+        <!--Definition du Hall of prestige-->
+        <h2>Hall of Prestige</h2>
+        <div id="hall" style="display: flex; flex-wrap: wrap; gap: 10px;"></div>
+        <p id="prestige">Prestige : 0</p>
+        <p id="title"></p>
+
+        <!--Definition des succes-->
+        <h2>Succès</h2>
+        <ul id="achievements"></ul>
+
+        <!--Stats detailles du prestige-->
+        <button onclick="showPrestigeStats()">Voir Détails Prestige</button>
+        <div id="prestigeModal" style="display:none; position:fixed; top:10%; left:20%; width:60%; background:#111; color:#fff; padding:20px; border:2px solid gold; z-index:10000;">
+            <h2>Détails Prestige</h2>
+            <div id="prestigeDetails"></div>
+            <button onclick="document.getElementById('prestigeModal').style.display='none'">Fermer</button>
+        </div>
+    </html>
+</DOCTYPE>

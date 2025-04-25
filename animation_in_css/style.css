@@ -1,0 +1,114 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #444;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+button:active {
+    background-color: #444444;
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #2a2a2a;
+    color: #777;
+    border-color: #2a2a2a;
+    cursor: not-allowed;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #1e1e1e;
+    border: 1px solid #555;
+    color: #fff;
+    text-align: center;
+}
+
+#console {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+#wallet {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00e676;
+}
+
+#value {
+    width: 100px;
+}
+.item {
+    border: 2px solid gold;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    width: 160px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.item:hover {
+    transform: scale(1.1);
+}
+.high-prestige {
+    animation: sparkle 1s infinite alternate;
+}
+@keyframes sparkle {
+    0% { box-shadow: 0 0 10px #FFD700; }
+    100% { box-shadow: 0 0 20px #FF8C00; }
+}
+body.prestige-skin-1 {
+    background-color: #1a1a2e;
+    color: #eee;
+}
+body.prestige-skin-2 {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+body.prestige-skin-3 {
+    background-color: #000;
+    color: #ccc;
+}
+body.anim-stars::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 5px 5px;
+    animation: starfall 2s linear infinite;
+    opacity: 0.2;
+    z-index: 9999;
+}
+@keyframes starfall {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100%;
+    }
+}
